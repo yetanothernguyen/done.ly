@@ -15,6 +15,7 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @activities = Post.order("created_at DESC")
+    @users = User.all
 
     respond_to do |format|
       format.html # show.html.erb

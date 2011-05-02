@@ -5,6 +5,14 @@
 	<p><%= @team.description %></p>
 </div>
 
+<h3>Team members:</h3>
+<ul>
+<% @users.each do |user| %>
+	<li><%= user.name %></li>
+<% end %>
+</ul>
+
+<h3>Team activities:</h3>
 <ul>
 <% @activities.each do |activity| %>
 	<li><%= activity.user.name %> done <%= activity.content %></li>
