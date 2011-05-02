@@ -9,4 +9,4 @@
 
 
 # Teams
-Team.find_or_create_by_name(:name => "Tech Team", :description => "We are solvers. That's what we do. We solve your problems. As fast as we can.")
+Team.find_or_create_by_name(:name => "SAYS.my", :description => "We're a group of young people based in Asia who grow businesses related to social technology and the collective power of people. We love working with great people to build leading products in the fastest growing markets.")
