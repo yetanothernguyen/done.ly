@@ -191,6 +191,16 @@ ul.team-members li {
 	border-top: 1px solid #68CBDA;
 	border-bottom: 1px solid #68CBDA;
 	}
+	#idid {
+		display: block;
+		float:left;
+		height:20px;
+		margin-top:14px;
+		margin-left:20px;
+		color: #ccc;
+		width:24px;
+	}
+		
 	#inputdone{
 		background:  url(/images/inputbg.png) repeat-x top;
 
@@ -205,8 +215,10 @@ ul.team-members li {
 		}
 		#inputdone input#post_content{
 			border: 0;
-			padding: 20px 20px 15px;
-			width: 500px;
+			padding: 20px 5px 15px;
+			margin-left:0px;
+
+			width: 480px;
 			float: left;
  			font-size: 15px;
  			background: transparent;
