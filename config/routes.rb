@@ -1,11 +1,20 @@
 DoneLy::Application.routes.draw do
 
+  # get "posts/index"
+  # get "posts/show"
+  # get "posts/new"
+  # get "posts/create"
+  # get "posts/update"
+  # get "posts/delete"
+
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   resources :teams
   resources :users, :only => :show
 
-  root :to => "teams#index"
+  resources :posts
+
+  root :to => "teams#show"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

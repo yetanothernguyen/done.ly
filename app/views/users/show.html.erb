@@ -1,2 +1,76 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div id="userprofile">
+	<div id="profiletop">
+		<div class="span-5-2 fleft">
+		<%= image_tag '/images/prof.jpg' %>
+		</div>
+		<div class="span-10 fleft">
+			<h2><%= @user.name %> <span>Status</span></h2>
+			<p>Web Designer</p>
+			<p>+6 016 331 4187</p>
+			<p>gaddafi@youthasia.com</p>
+		</div>
+	</div>
+
+	<%= render "posts/form" %>
+
+	<div id="proflebottom">
+		<div class="stat">
+			<ul>
+ 				<li><a href="#">Daily</a></li>
+ 				<li><a href="#">Weekly</a></li>
+ 				<li class="last"><a href="#">Monthly</a></li>
+			 </ul>
+		</div>
+		
+		<div class="taskdone">
+			<ul class="daily">
+				<% for day in @posts_by_days do %>
+					<li><%= day[0] %>
+						<ul class="taskly">
+							<% for post in day[1] do %>
+								<li>
+									<%= post.content %>
+								</li>
+							<% end %>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+			
+		</div>
+
+		<div class="taskdone">
+			<ul class="daily">
+				<li>02 May 2011</li>
+					<ul class="taskly">
+ 						<li>
+ 						soihf asihosai hoihfiosa
+ 						<span>10 minutes ago</span></li>
+						<li> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span>4 minutes ago</span></li>
+ 						<li>sunt in culpa qui officia deserunt mollit anim id est laborum <span>4 minutes ago</span></li>
+  						<li>
+ 						soihf asihosai hoihfiosa
+ 						<span>10 minutes ago</span></li>
+						<li> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span>4 minutes ago</span></li>
+ 						<li>sunt in culpa qui officia deserunt mollit anim id est laborum <span>4 minutes ago</span></li>
+
+
+					</ul>
+				<li>01 May 2011</li>
+					<ul class="taskly">
+ 						<li>soihf asihosai hoihfiosa </li>
+						<li>soihf asihosai hoihfiosa </li>
+						<li>soihf asihosai hoihfiosa </li>
+					</ul>
+				<li>26 April 2011</li>
+					<ul class="taskly">
+ 						<li>soihf asihosai hoihfiosa </li>
+						<li>soihf asihosai hoihfiosa </li>
+						<li>soihf asihosai hoihfiosa </li>
+					</ul>
+			</ul>
+
+		</div>
+
+	</div>
+ </div>

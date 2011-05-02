@@ -1,7 +1,17 @@
 class UsersController < ApplicationController
+  before_filter :find_user, :only => :show
+
 
   def show
-  	@user = User.find(params[:id])
+
+    @post = Post.new
+    @posts_by_days = current_user.posts.group_by(&:date)
+  end
+
+
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
 end

@@ -2,14 +2,24 @@
 <html>
 <head>
   <title>DoneLy</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<p class="notice hide"><%= notice %></p>
+<p class="alert hide"><%= alert %></p>
+<%= render 'shared/header' %>
+
+
+<div id="maincontainer">
+
 <%= yield %>
+</div>
+
 
 </body>
 </html>
