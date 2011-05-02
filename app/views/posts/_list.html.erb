@@ -12,7 +12,8 @@
 					<% for post in day[1] do %>
 						<% author = post.user %>
 						<li>
-							<%= current_user && current_user.id == author.id ? "I" : author.name %>
+							<%#= current_user && current_user.id == author.id ? "You" : author.name %>
+							<%= author.name %>
 							<%= post.content %>
 							
 							
