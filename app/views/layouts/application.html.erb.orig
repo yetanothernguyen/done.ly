@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DoneLy</title>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Kreon' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<<<<<<< HEAD
+  <link href='http://fonts.googleapis.com/css?family=Neuton' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :all %>
+=======
+
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "http://code.jquery.com/jquery-1.5.2.min.js" %>
+	<%= yield :javascript %>
+
+>>>>>>> let users vote with high five
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<p class="notice hide"><%= notice %></p>
+<p class="alert hide"><%= alert %></p>
+<%= render 'shared/header' %>
+
+
+<div id="maincontainer">
+
+<%= yield %>
+</div>
+
+
+</body>
+</html>

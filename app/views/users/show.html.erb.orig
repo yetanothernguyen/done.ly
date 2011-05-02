@@ -1,16 +1,11 @@
 <% content_for :javascript do %>
 	<%= javascript_include_tag "votes" %>
-	<%= javascript_include_tag "users" %>
 <% end %>
 
 <div id="userprofile">
 	<div id="profiletop">
 		<div class="span-5-2 fleft">
-		<% if @user == current_user %>
-			<%= link_to image_tag(avatar_url(@user)), "http://gravatar.com/emails", :title => "Change", :target => "_blank" %>
-		<% else %>
-			<%= image_tag avatar_url(@user) %>
-		<% end %>
+		<%= image_tag '/images/prof.jpg' %>
 		</div>
 		<div class="span-10 fleft">
 			<h2><%= @user.name %> <span>Status</span></h2>
@@ -22,9 +17,7 @@
 		</div>
 	</div>
 
-	<% if @user == current_user %>
-		<%= render "posts/form" %>
-	<% end %>
+	<%= render "posts/form" %>
 
 	<div id="proflebottom">
 		<div class="stat">
@@ -32,7 +25,7 @@
  				<li class="current"><a href="#">Daily</a></li>
  				<li><a href="#">Weekly</a></li>
  				<li><a href="#">Monthly</a></li>
- 				<li class="fright"><%= @user.posts.count %></li>
+ 				<li class="fright">2</li>
 			 </ul>
  		</div>
 
@@ -46,15 +39,23 @@
 								<li>
 									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 									
 									
 									<span><%= "#{post.votes.count} High Fives!" %></span>
-									<% if current_user && current_user != @user && post.votes.by_user(current_user).empty? %>
+									<% if current_user && post.votes.by_user(current_user).empty? %>
 									<span>
 										<%= render :partial => "votes/form", :locals => {:post => post} %>
 									</span>
 									<% end %>
+>>>>>>> let users vote with high five
 								</li>
+=======
+
+ 								</li>
+>>>>>>> update home page
 							<% end %>
 						</ul>
 					</li>
