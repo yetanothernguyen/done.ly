@@ -5,7 +5,11 @@
 <div id="userprofile">
 	<div id="profiletop">
 		<div class="span-5-2 fleft">
-		<%= image_tag '/images/prof.jpg' %>
+		<% if @user == current_user %>
+			<%= link_to image_tag(avatar_url(@user)), "http://gravatar.com/emails", :title => "Change", :target => "_blank" %>
+		<% else %>
+			<%= image_tag avatar_url(@user) %>
+		<% end %>
 		</div>
 		<div class="span-10 fleft">
 			<h2><%= @user.name %> <span>Status</span></h2>
@@ -17,7 +21,9 @@
 		</div>
 	</div>
 
-	<%= render "posts/form" %>
+	<% if @user == current_user %>
+		<%= render "posts/form" %>
+	<% end %>
 
 	<div id="proflebottom">
 		<div class="stat">

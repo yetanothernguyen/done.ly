@@ -9,7 +9,7 @@ DoneLy::Application.routes.draw do
   # get "posts/update"
   # get "posts/delete"
 
-  devise_for :users, :controllers => { :registrations => "users/registrations" }
+  devise_for :users #, :controllers => { :registrations => "users/registrations" }
 
   resources :teams
   resources :users, :only => :show
