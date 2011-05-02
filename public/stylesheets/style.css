@@ -1,0 +1,153 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:#333;
+}
+
+.wrap{
+width: 800px;
+margin: 0 auto;
+}
+.wrapsmall{
+width: 640px;
+margin: 0 auto;
+}
+.fleft{float:left;}
+.fright{float:right;}
+.clear{clear: both;}
+#maincontainer{
+	width: 800px;
+	margin: 0 auto;
+	background: #fff;
+	}
+
+#header{
+	overflow: hidden;}
+
+
+h1#brand{
+	width: 100px;
+	float: left;
+	font-size: 20px;
+	color: yellow;
+	}
+/* TOP NAV */
+ul#topnav{
+	float: right;
+	list-style: none;
+	margin: 0 ;
+	padding: 0;
+	}
+	ul#topnav li {
+	float: left;
+	}
+	ul#topnav li a{
+		display: block;
+		padding: 10px 0 10px 20px;
+		color: #ccc;
+		}
+
+
+/* USER PROFILE */
+
+#userprofile{
+	width: 640px;
+	margin: 0 auto;
+	background: #fff;
+	overflow: hidden;
+	box-shadow:0px 0px 3px #000;
+	-moz-box-shadow:0px 0px 3px #000;
+	-webkit-box-shadow:0px 0px 3px #000;
+	}
+#profiletop {
+	overflow: hidden;
+	border-bottom: 1px solid #006699;
+	}
+#profiletop .span-5-2{
+	background: #9FD9E4;
+	}	
+#profiletop .span-5-2 img{
+	width: 170px;
+	height: 150px;
+	padding: 5px;
+	margin: 15px ;
+	background: #fff;
+	}
+#profiletop .span-10{
+	margin: 0 0 0 15px;
+	padding: 20px 0 0;
+	}
+	#profiletop .span-10 p{
+		margin: 0 0 0px;
+		}
+	#profiletop .span-10 h2 span{
+    background: none repeat scroll 0 0 green;
+    display: inline-block;
+    height: 10px;
+    text-indent: -9999px;
+    width: 10px;
+    		border-radius: 7px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	}
+		#profiletop .span-10 h2 span.not{
+			background: red;
+			}
+
+	
+#proflemiddle {	
+	background: #0099CC;
+	padding: 15px;
+	border-top: 1px solid #68CBDA;
+	border-bottom: 1px solid #68CBDA;
+	}	
+	#inputdone{
+		background: #F2F2F2 url(/images/inputbg.png) repeat-x top;
+ 
+		border: 1px solid #11669E;
+		box-shadow:0px 1px 0px #26AEF1;
+		-moz-box-shadow:0px 1px 0px #26AEF1;
+		-webkit-box-shadow:0px 1px 0px #26AEF1;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		overflow: hidden;
+		}
+		#inputdone input{
+			border: 0;
+			padding: 20px;
+			width: 440px;
+			float: left;
+ 			font-size: 15px;
+ 			background: transparent;
+					border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		}
+		#inputdone p.charcount{
+			    float: left;
+    padding: 20px 0 0;
+    width: 30px;
+    color: #ccc;
+			
+			}
+		#inputdone button{	
+			float: right;
+ 			margin: 10px 10px 10px 0;
+ 			
+			}
+
+
+#proflebottom{	
+	border-top: 1px solid #006699;
+	 }
+	.taskdone ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;}
+		.taskdone ul li{
+			padding: 10px 15px;
+			border-bottom: 1px solid #ccc;
+			}
