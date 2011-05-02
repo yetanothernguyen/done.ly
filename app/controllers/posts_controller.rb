@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:new, :create, :update, :delete]
+
   def index
   end
 
