@@ -121,7 +121,7 @@ ul#topnav{
 	border-bottom: 1px solid #68CBDA;
 	}	
 	#inputdone{
-		background: #F2F2F2 url(/images/inputbg.png) repeat-x top;
+		background:  url(/images/inputbg.png) repeat-x top;
  
 		border: 1px solid #11669E;
 		box-shadow:0px 1px 0px #26AEF1;
@@ -134,7 +134,7 @@ ul#topnav{
 		}
 		#inputdone input#post_content{
 			border: 0;
-			padding: 20px;
+			padding: 20px 20px 15px;
 			width: 500px;
 			float: left;
  			font-size: 15px;
@@ -148,6 +148,7 @@ ul#topnav{
     padding: 20px 0 0;
     width: 30px;
     color: #ccc;
+    margin: 0;
 			
 			}
 		#inputdone #post_submit{	
@@ -164,8 +165,7 @@ ul#topnav{
 		background: -webkit-gradient(linear, left top, left bottom, from(#10649D), to(#0A4B78));
 		background: -moz-linear-gradient(top,  #10649D,  #0A4B78);
  		padding: 10px 20px;
-		border-bottom: 1px solid #eee;
-		overflow: hidden;
+ 		overflow: hidden;
 		}
 		#proflebottom .stat ul{
 				background: -webkit-gradient(linear, left top, left bottom, from(#10649D), to(#0A4B78));
@@ -178,7 +178,7 @@ ul#topnav{
 		-moz-box-shadow:0px  1px 0px #1178BD inset ;
 		-webkit-box-shadow:0px  1px 0px #1178BD inset ;
 
-		list-style: none; float: left;width: 250px;margin: 0;padding: 0;}
+		list-style: none; float: left;width: 245px;margin: 0;padding: 0;}
 		#proflebottom .stat ul li a{
 		float: left;
 		display: block;
@@ -190,9 +190,13 @@ ul#topnav{
 		font-size: 11px;
 		text-transform: uppercase; 
 		border-right:1px solid #073D62;
+ 		text-align: center;
+		}
+		#proflebottom .stat ul li.last a{
+				border-right:0px solid #073D62;
 
 		}
-	.taskdone ul{
+ 	.taskdone ul{
 		list-style: none;
 		margin: 0;
 		padding: 0;}
@@ -205,8 +209,9 @@ ul#topnav{
 			text-transform: uppercase;
 			font-size: 12px;
 			padding: 10px 15px 10px 20px;
-			background: #FFCC00 url(/images/r-arr.png) no-repeat left center;
-			}
+			background: url(/images/r-arr.png) no-repeat left center,
+			-moz-linear-gradient(top, #eee,  #CCCCCC);
+ 			}
 			.taskdone ul.taskly{
 				margin: 10px 20px 10px 20px;
 				overflow: hidden;
@@ -220,11 +225,17 @@ ul#topnav{
  }
 				.taskdone ul.taskly li{
  					background: transparent;
-  					font-size: 13px;
+  					font-size: 14px;
   					padding: 10px 15px;
 					text-transform: none;
 					font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  					border-bottom:1px solid #eee;
+ 					border-top:0px;
 					}
+					.taskdone ul.taskly li span{
+						display: block;
+						color: #ccc;
+						font-size: 11px;
+						}
 					.taskdone ul.taskly li:hover{
-					background: lightblue;}
+					background: #eee;}
