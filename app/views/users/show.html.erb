@@ -4,20 +4,11 @@
 		<%= image_tag '/images/prof.jpg' %>
 		</div>
 		<div class="span-10 fleft">
-			<h2>Gaddafi Rusli <span>Status</span></h1>
-			<p>Web Designer</p>
-			<p>+6 016 331 4187</p>
-			<p>gaddafi@youthasia.com</p>
+			<h2><%= @user.name %> <span>Status</span></h1>
 		</div>
 	</div>
 
-	<div id="proflemiddle">
-		<div id="inputdone">
-		<input placeholder="What have you done today?"></input>
-		<p class="charcount">140</p>
-		<button class="leo-btn blue">Done</button>
-		</div>
-	</div>
+	<%= render "posts/form" %>
 
 	<div id="proflebottom">
 		<div class="stat">
@@ -25,25 +16,16 @@
 		</div>
 		<div class="taskdone">
 			<ul>
-				<li>soihf asihosai hoihfiosa </li>
-				<li>soihf asihosai hoihfiosa </li>
-				<li>soihf asihosai hoihfiosa </li>
-				<li>soihf asihosai hoihfiosa </li>
-				<li>soihf asihosai hoihfiosa </li>
-
+			<% for post in @posts do %>
+				<li><p>post.content</p></li>
+			<% end%>
 			</ul>
-
 		</div>
 
 	</div>
 
-</div><h1><%= @user.name %></h1>
+</div><h1></h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<ul>
-<% for post in @posts do %>
-	<li><p>post.content</p></li>
-<% end%>
-</ul>
-<%= render "posts/form" %>
+
 

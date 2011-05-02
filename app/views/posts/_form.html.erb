@@ -1,11 +1,11 @@
+<div id="proflemiddle">
 <%= form_for(@post) do |f| %>
-	<div class="field">
+	<div id="inputdone">
 		<%= f.label :content%>
 		<%= f.text_field :content%>
-		
+
+		<p class="charcount">140</p>
+		<%= f.submit "Post", :class => 'leo-btn blue' %>
 	</div>
-	
-	<div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
+</div>
