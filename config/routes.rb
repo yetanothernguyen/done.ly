@@ -1,12 +1,7 @@
 DoneLy::Application.routes.draw do
 
-<<<<<<< HEAD
-  # get "highfive/new"
-  # get "highfive/create"
-=======
   get "home/index"
 
->>>>>>> New home page
   # get "posts/index"
   # get "posts/show"
   # get "posts/new"
