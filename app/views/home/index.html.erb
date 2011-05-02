@@ -1,3 +1,11 @@
-<h1>An awesome app to track what your team has accomplished!</h1>
+<div id="homepage">
 
+<h1 class="tagline">An awesome app to track <br />what your team has <br />accomplished.</h1>
+<div class="bigpad">
 <%= link_to "See teams on Done.ly", teams_path %>
+<div class="span-5 fright">
+  <%= link_to "Sign up", new_user_registration_path, :class=>"leo-btn orange" %>
+  or
+	  <%= link_to 'Login', new_user_session_path, :class=>"leo-btn blue" %>
+</div>
+</div></div>

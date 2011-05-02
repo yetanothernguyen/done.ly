@@ -20,6 +20,7 @@ margin: 0 auto;
 .fright{float:right;}
 .clear{clear: both;}
 .hide{display: none;}
+.bigpad{padding: 30px;}
 #maincontainer{
 	width: 700px;
 	margin: 0 auto 20px;
@@ -31,7 +32,7 @@ margin: 0 auto;
 
 #header{
 	overflow: hidden;
-	padding: 15px 0 0;}
+	padding: 15px 0 10px;}
 
 
 h1#brand a{
@@ -59,7 +60,28 @@ ul#topnav{
 		color: #ccc;
 		}
 
+/* HOME PAGE */
+#homepage{
+	}
+#homepage .tagline{
+	    font-family: 'Neuton',Arial,serif;
+	    font-size: 40px;
+	line-height: 50px;
+	background: url("/images/bubbl.png") no-repeat scroll 550px 80px #FFFF66 ;
+	padding: 20px 30px 30px;
+	border-top:1px solid #FFF8A7;
+	border-left:1px solid #FFF8A7;
 
+	border-radius: 7px 7px 0 0;
+	-moz-border-radius: 7px 7px 0 0;
+	-webkit-border-radius: 7px 7px 0 0;
+
+}
+#homepage .bigpad .span-5{
+text-align: right;
+margin: 0;
+}
+    
 /* USER PROFILE */
 
 #userprofile{
