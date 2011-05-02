@@ -31,6 +31,12 @@
 								<li>
 									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
+									
+									<% if current_user %>
+									<span>
+										<%= link_to "High Five!", highfive_path(post)%>
+									</span>
+									<% end %>
 								</li>
 							<% end %>
 						</ul>

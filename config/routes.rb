@@ -1,5 +1,7 @@
 DoneLy::Application.routes.draw do
 
+  # get "highfive/new"
+  # get "highfive/create"
   # get "posts/index"
   # get "posts/show"
   # get "posts/new"
@@ -11,8 +13,9 @@ DoneLy::Application.routes.draw do
 
   resources :teams
   resources :users, :only => :show
-
   resources :posts
+
+  resources :votes 
 
   root :to => "teams#show"
   
