@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def show
 
     @post = Post.new
-    @posts = current_user.posts
+    @posts_by_days = current_user.posts.group_by(&:date)
   end
 
 

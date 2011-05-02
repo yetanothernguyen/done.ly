@@ -4,7 +4,7 @@
 		<%= image_tag '/images/prof.jpg' %>
 		</div>
 		<div class="span-10 fleft">
-			<h2><%= @user.name %> <span>Status</span></h1>
+			<h2><%= @user.name %> <span>Status</span></h2>
 			<p>Web Designer</p>
 			<p>+6 016 331 4187</p>
 			<p>gaddafi@youthasia.com</p>
@@ -21,6 +21,24 @@
  				<li><a href="#">Monthly</a></li>
 			 </ul>
 		</div>
+		
+		<div class="taskdone">
+			<ul class="daily">
+				<% for day in @posts_by_days do %>
+					<li><%= day[0] %>
+						<ul class="taskly">
+							<% for post in day[1] do %>
+								<li>
+									<%= post.content %>
+								</li>
+							<% end %>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+			
+		</div>
+
 		<div class="taskdone">
 			<ul class="daily">
 				<li>02 May 2011</li>

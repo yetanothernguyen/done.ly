@@ -13,7 +13,9 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post].merge({:user_id => current_user.id}))
-    @post.save
+    if @post.save
+      redirect_to user_path(current_user)
+    end
   end
 
   def update
