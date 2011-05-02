@@ -5,6 +5,8 @@ gem 'mysql2', '0.2.7'
 gem 'devise'
 gem 'cancan'
 gem 'friendly_id', '~>3.2.1'
+gem 'json'
+gem 'barista'
 
 group :development, :test do
 	gem "factory_girl_rails"

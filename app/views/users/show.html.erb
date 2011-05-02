@@ -1,3 +1,7 @@
+<% content_for :javascript do %>
+	<%= javascript_include_tag "votes" %>
+<% end %>
+
 <div id="userprofile">
 	<div id="profiletop">
 		<div class="span-5-2 fleft">
@@ -35,12 +39,15 @@
 								<li>
 									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
-<<<<<<< HEAD
+									
+									
+									<span><%= "#{post.votes.count} High Fives!" %></span>
+									<% if current_user && post.votes.by_user(current_user).empty? %>
+									<span>
+										<%= render :partial => "votes/form", :locals => {:post => post} %>
+									</span>
+									<% end %>
 								</li>
-=======
-
- 								</li>
->>>>>>> update home page
 							<% end %>
 						</ul>
 					</li>
