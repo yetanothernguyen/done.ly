@@ -1,7 +1,12 @@
 DoneLy::Application.routes.draw do
 
+<<<<<<< HEAD
   # get "highfive/new"
   # get "highfive/create"
+=======
+  get "home/index"
+
+>>>>>>> New home page
   # get "posts/index"
   # get "posts/show"
   # get "posts/new"
@@ -17,7 +22,7 @@ DoneLy::Application.routes.draw do
 
   resources :votes 
 
-  root :to => "teams#show"
+  root :to => "home#index"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
