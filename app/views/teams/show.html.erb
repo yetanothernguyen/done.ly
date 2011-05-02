@@ -15,6 +15,6 @@
 <h3>Team activities:</h3>
 <ul>
 <% @activities.each do |activity| %>
-	<li><%= activity.user.name %> done <%= activity.content %></li>
+	<li><%= activity.user.name %> <%= activity.content %></li>
 <% end %>
 </ul>
