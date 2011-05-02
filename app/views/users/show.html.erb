@@ -29,6 +29,7 @@
 						<ul class="taskly">
 							<% for post in day[1] do %>
 								<li>
+									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
 								</li>
 							<% end %>
