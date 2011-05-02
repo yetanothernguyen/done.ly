@@ -16,16 +16,18 @@
 	<div id="proflebottom">
 		<div class="stat">
 			<ul>
- 				<li><a href="#">Daily</a></li>
+ 				<li class="current"><a href="#">Daily</a></li>
  				<li><a href="#">Weekly</a></li>
- 				<li class="last"><a href="#">Monthly</a></li>
+ 				<li><a href="#">Monthly</a></li>
+ 				<li class="fright">2</li>
 			 </ul>
-		</div>
-		
+ 		</div>
+
 		<div class="taskdone">
 			<ul class="daily">
 				<% for day in @posts_by_days do %>
-					<li><%= day[0] %>
+					<li>
+						<p><%= day[0] %></p>
 						<ul class="taskly">
 							<% for post in day[1] do %>
 								<li>
@@ -43,41 +45,10 @@
 					</li>
 				<% end %>
 			</ul>
-			
-		</div>
-
-		<div class="taskdone">
-			<ul class="daily">
-				<li>02 May 2011</li>
-					<ul class="taskly">
- 						<li>
- 						soihf asihosai hoihfiosa
- 						<span>10 minutes ago</span></li>
-						<li> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span>4 minutes ago</span></li>
- 						<li>sunt in culpa qui officia deserunt mollit anim id est laborum <span>4 minutes ago</span></li>
-  						<li>
- 						soihf asihosai hoihfiosa
- 						<span>10 minutes ago</span></li>
-						<li> nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span>4 minutes ago</span></li>
- 						<li>sunt in culpa qui officia deserunt mollit anim id est laborum <span>4 minutes ago</span></li>
-
-
-					</ul>
-				<li>01 May 2011</li>
-					<ul class="taskly">
- 						<li>soihf asihosai hoihfiosa </li>
-						<li>soihf asihosai hoihfiosa </li>
-						<li>soihf asihosai hoihfiosa </li>
-					</ul>
-				<li>26 April 2011</li>
-					<ul class="taskly">
- 						<li>soihf asihosai hoihfiosa </li>
-						<li>soihf asihosai hoihfiosa </li>
-						<li>soihf asihosai hoihfiosa </li>
-					</ul>
-			</ul>
 
 		</div>
+
+
 
 	</div>
  </div>

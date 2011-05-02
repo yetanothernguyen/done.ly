@@ -1,8 +1,8 @@
 <div id="proflemiddle">
 <%= form_for(@post) do |f| %>
 	<div id="inputdone">
-		<%= f.label :content, :class=>"hide" %>
-		<%= f.text_field :content%>
+		<%= f.label :content, :class=>"hide"%>
+		<%= f.text_field :content,:placeholder => "What have you done today?" %>
 
 		<p class="charcount">140</p>
 		<%= f.submit "Post", :class => 'leo-btn blue' %>

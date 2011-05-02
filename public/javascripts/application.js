@@ -1,2 +1,6 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+	$(document).ready(function() {
+		$('#post_content').keyup(function() {
+			var charLength = 140 - $(this).val().length;
+ 			$('p.charcount').html(charLength);
+ 		});
+	});
