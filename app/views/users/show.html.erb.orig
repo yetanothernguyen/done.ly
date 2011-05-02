@@ -1,0 +1,74 @@
+<% content_for :javascript do %>
+	<%= javascript_include_tag "users" %>
+<% end %>
+
+<div id="userprofile">
+	<div id="profiletop">
+		<div class="span-5 fleft">
+		<% if @user == current_user %>
+			<%= link_to image_tag(avatar_url(@user)), "http://gravatar.com/emails", :title => "Change", :target => "_blank" %>
+		<% else %>
+			<%= image_tag avatar_url(@user) %>
+		<% end %>
+		</div>
+		<div class="span-10 fleft">
+			<h2><%= @user.name %> <span>Status</span></h2>
+			<p><%= @user.email %></p>
+			<% team = Team.first %>
+			<% if team %>
+				<p><%= link_to team.name, team_path(team) %></p>
+			<% end %>
+		</div>
+	</div>
+
+	<% if @user == current_user %>
+		<%= render "posts/form" %>
+	<% end %>
+
+	<div id="proflebottom">
+		<div class="stat">
+			<ul>
+ 				<li class="current"><a href="#">Daily</a></li>
+ 				<li><a href="#">Weekly</a></li>
+ 				<li><a href="#">Monthly</a></li>
+ 				<li class="fright"><%= @user.posts.count %></li>
+			 </ul>
+ 		</div>
+
+<<<<<<< HEAD
+		<div class="taskdone">
+			<ul class="daily">
+				<% for day in @posts_by_days do %>
+					<li>
+						<% days_ago = Time.now.to_date - day[0]%>
+						<p><%= days_ago == 0 ? "Today" : "#{days_ago} #{pluralize(2, 'day')} ago" %></p>
+						<ul class="taskly">
+							<% for post in day[1] do %>
+								<li>
+									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
+									<%= post.content %>
+
+
+									<% if current_user && current_user != @user && post.votes.by_user(current_user).empty? %>
+									<span>
+										<%= render :partial => "votes/form", :locals => {:post => post} %>
+									</span>
+									<% end %>
+																		<span><%= "#{post.votes.count} High Fives!" %></span>
+
+								</li>
+							<% end %>
+						</ul>
+					</li>
+				<% end %>
+			</ul>
+
+		</div>
+
+=======
+		<%= render :partial => "posts/list", :locals => {:posts_by_days => @posts_by_days}%>
+>>>>>>> list in team view
+
+
+	</div>
+ </div>
