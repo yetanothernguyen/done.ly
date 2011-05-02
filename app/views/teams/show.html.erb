@@ -13,7 +13,10 @@
 	<li><%= image_tag avatar_url(user, 50) %></li>
 <% end %>
 </ul>
+</div>
+<div class="span-11 fleft">
 
 <h3>Team activities:</h3>
 
 <%= render :partial => "posts/list", :locals => {:posts_by_days => @posts_by_days}%>
+</div>

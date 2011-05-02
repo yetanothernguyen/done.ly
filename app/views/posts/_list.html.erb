@@ -15,14 +15,16 @@
 							<%#= current_user && current_user.id == author.id ? "You" : author.name %>
 							<%= author.name %>
 							<%= post.content %>
-							
-							
-							<span><%= "#{post.votes.count} High Fives!" %></span>
+
+
 							<% if current_user && current_user != author && post.votes.by_user(current_user).empty? %>
 							<span>
 								<%= render :partial => "votes/form", :locals => {:post => post} %>
 							</span>
+
 							<% end %>
+									<span><%= "#{post.votes.count} High Fives!" %></span>
+
 						</li>
 					<% end %>
 				</ul>
