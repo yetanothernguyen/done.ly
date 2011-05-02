@@ -1,0 +1,31 @@
+<% content_for :javascript do %>
+	<%= javascript_include_tag "votes" %>
+<% end %>
+
+<div class="taskdone">
+	<ul class="daily">
+		<% for day in posts_by_days do %>
+			<li>
+				<% days_ago = Time.now.to_date - day[0]%>
+				<p><%= (days_ago == 0) ? "Today" : "#{pluralize(days_ago, 'day')} ago" %></p>
+				<ul class="taskly">
+					<% for post in day[1] do %>
+						<% author = post.user %>
+						<li>
+							<%= current_user && current_user.id == author.id ? "I" : author.name %>
+							<%= post.content %>
+							
+							
+							<span><%= "#{post.votes.count} High Fives!" %></span>
+							<% if current_user && current_user != author && post.votes.by_user(current_user).empty? %>
+							<span>
+								<%= render :partial => "votes/form", :locals => {:post => post} %>
+							</span>
+							<% end %>
+						</li>
+					<% end %>
+				</ul>
+			</li>
+		<% end %>
+	</ul>
+</div>

@@ -14,7 +14,7 @@ class TeamsController < ApplicationController
   # GET /teams/1.xml
   def show
     @team = Team.find(params[:id])
-    @activities = Post.order("created_at DESC")
+    @posts_by_days = Post.by_date.group_by(&:date) # refactor to support multiple teams
     @users = User.all
 
     respond_to do |format|

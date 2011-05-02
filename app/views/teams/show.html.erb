@@ -13,13 +13,7 @@
 	<li><%= image_tag avatar_url(user, 50) %></li>
 <% end %>
 </ul>
-</div>
-<div class="span-11 fleft">
-<h3>Activities </h3>
-<ul class="team-activities">
-<% @activities.each do |activity| %>
-	<li><%= activity.user.name %> <%= activity.content %></li>
-<% end %>
-</ul>
-</div>
-</div>
+
+<h3>Team activities:</h3>
+
+<%= render :partial => "posts/list", :locals => {:posts_by_days => @posts_by_days}%>
