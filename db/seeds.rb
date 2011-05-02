@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+
+
+# Teams
+Team.find_or_create_by_name(:name => "Tech Team", :description => "We are solvers. That's what we do. We solve your problems. As fast as we can.")
