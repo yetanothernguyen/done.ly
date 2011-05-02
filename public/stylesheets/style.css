@@ -7,7 +7,8 @@ body{
 	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
 	font-size: 12px;
 }
-
+a{
+color: #333;}
 .wrap{
 width: 700px;
 margin: 0 auto;
@@ -21,8 +22,12 @@ margin: 0 auto;
 .clear{clear: both;}
 .hide{display: none;}
 .bigpad{padding: 30px;overflow:hidden;}
-/*
-input{padding: 7px;
+ 
+#user_new #user_email,
+#user_password,
+#user_password_confirmation,
+#user_name
+{padding: 7px;
 font-size: 13px;
 color: #555;
 	border-radius: 4px;
@@ -31,7 +36,7 @@ color: #555;
 	border:1px solid #ccc;
 
 }
-*/
+ 
 label{font-size: 12px;color: #888;
 }
 .tophead{
@@ -98,9 +103,15 @@ ul#topnav{
 	-webkit-border-radius: 7px 7px 0 0;
 
 }
+#homepage .bigpad{
+	padding: 20px 30px 30px;
+	}
 #homepage .bigpad .span-5{
-text-align: right;
-margin: 0;
+text-align: center;
+margin: 10px 0 0;
+background: #eee;
+padding: 25px 0;
+
 }
 /* TEAM PAGE */
 

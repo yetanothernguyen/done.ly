@@ -1,17 +1,21 @@
 <div id="homepage">
 
-<h1 class="tagline">Done.ly - an awesome app to help you:</h1>
+<h1 class="tagline">An awesome app to track <br />what your team has <br />accomplished</h1>
+<div class="bigpad">
+<div class="span-11">
+<h2>Done.ly - an awesome app to help you</h2>
 <ul>
 	<li>Keep a record of what you got done.</li>
 	<li>Look at your accomplishments from yesterday to motivate you today.</li>
 	<li>Know what your team got done at any moment.</li>
 </ul>
-Getting stuff done has never been easier.
-<div class="bigpad">
-<%= link_to "See what this awesome has been getting done", team_path(Team.first) %>
+Getting stuff done has never been easier. <br />
+
+<%= link_to "See what this awesome team has been getting done", team_path(Team.first) %>
+</div>
 <div class="span-5 fright">
   <%= link_to "Sign up", new_user_registration_path, :class=>"leo-btn orange" %>
-  or
+  <br /> or <br />
 	  <%= link_to 'Login', new_user_session_path, :class=>"leo-btn blue" %>
 </div>
 </div></div>
