@@ -3,6 +3,7 @@ DoneLy::Application.routes.draw do
   devise_for :users
 
   resources :teams
+  resources :users, :only => :show
 
   root :to => "teams#show"
   
