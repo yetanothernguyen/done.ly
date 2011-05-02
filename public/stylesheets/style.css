@@ -132,7 +132,7 @@ ul#topnav{
 		-webkit-border-radius: 4px;
 		overflow: hidden;
 		}
-		#inputdone input{
+		#inputdone input#post_content{
 			border: 0;
 			padding: 20px;
 			width: 500px;
@@ -150,7 +150,7 @@ ul#topnav{
     color: #ccc;
 			
 			}
-		#inputdone button{	
+		#inputdone #post_submit{	
 			float: right;
  			margin: 10px 10px 10px 0;
  			

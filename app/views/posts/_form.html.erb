@@ -1,7 +1,7 @@
 <div id="proflemiddle">
 <%= form_for(@post) do |f| %>
 	<div id="inputdone">
-		<%= f.label :content%>
+		<%= f.label :content, :class=>"hide" %>
 		<%= f.text_field :content%>
 
 		<p class="charcount">140</p>
