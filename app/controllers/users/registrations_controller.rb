@@ -5,6 +5,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   private
   
   def check_permissions
-      raise Exceptions::NotAuthorized unless current_user.try(:admin?)
+      #raise Exceptions::NotAuthorized unless current_user.try(:admin?)
   end
 end

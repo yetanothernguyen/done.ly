@@ -5,9 +5,7 @@
 		</div>
 		<div class="span-10 fleft">
 			<h2><%= @user.name %> <span>Status</span></h2>
-			<p>Web Designer</p>
-			<p>+6 016 331 4187</p>
-			<p>gaddafi@youthasia.com</p>
+			<p><%= @user.email %></p>
 		</div>
 	</div>
 
@@ -33,12 +31,6 @@
 								<li>
 									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
-									
-									<% if current_user %>
-									<span>
-										<%= link_to "High Five!", highfive_path(post)%>
-									</span>
-									<% end %>
 								</li>
 							<% end %>
 						</ul>
