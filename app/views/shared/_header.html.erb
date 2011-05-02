@@ -5,9 +5,6 @@
 <h1 id="brand"><a href="/">Done.ly</a></h1>
 <ul id="topnav">
 	<% if user_signed_in? %>
-		<% if current_user.admin? %>
-			<li><a href="#">Dashboard</a></li>
-		<% end %>
 		<li><%= link_to 'Your Profile', user_path(current_user) %></li>
 		<li><%= link_to 'Settings', edit_user_registration_path %></li>
 		<li><%= link_to 'Logout', destroy_user_session_path %></li>
