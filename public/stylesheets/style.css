@@ -5,7 +5,7 @@
 body{
 	background:#333 url(/images/hugebg.gif) repeat top center;
 	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", Arial, sans-serif;
-
+	font-size: 12px;
 }
 
 .wrap{
@@ -20,7 +20,8 @@ margin: 0 auto;
 .fright{float:right;}
 .clear{clear: both;}
 .hide{display: none;}
-.bigpad{padding: 30px;}
+.bigpad{padding: 30px;overflow:hidden;}
+/*
 input{padding: 7px;
 font-size: 13px;
 color: #555;
@@ -30,6 +31,7 @@ color: #555;
 	border:1px solid #ccc;
 
 }
+*/
 label{font-size: 12px;color: #888;
 }
 .tophead{
@@ -100,7 +102,32 @@ ul#topnav{
 text-align: right;
 margin: 0;
 }
-    
+/* TEAM PAGE */
+
+#teampage ul{
+list-style: none;
+margin: 10px 0 0 ;
+padding: 0;
+
+}
+
+ul.team-activities{
+border-top: 1px solid #ccc;
+}
+ul.team-activities li{
+	padding: 5px 0;
+	border-bottom: 1px solid #eee;
+	
+	}
+ul.team-members{
+	overflow: hidden;}
+ul.team-members li {
+	float: left;
+	height: 50px;
+	width: 50px;
+	margin: 0 10px 10px 0;
+	display: block;
+	}
 /* USER PROFILE */
 
 #userprofile{
@@ -119,22 +146,21 @@ margin: 0;
 	overflow: hidden;
 	border-bottom: 1px solid #006699;
 	}
-#profiletop .span-5-2{
- 	}	
-#profiletop .span-5-2 img{
+#profiletop .span-5{
+ 	}
+#profiletop .span-5 img{
 	width: 150px;
 	height: 150px;
 	padding: 5px;
 	margin: 15px ;
- 
+
 	background: #fff;
 	box-shadow:0px 1px 3px #333;
 -moz-box-shadow:0px 1px 3px #333;
 -webkit-box-shadow:0px 1px 3px #333;
 	}
 #profiletop .span-10{
-	margin: 0 0 0 15px;
-	padding: 20px 0 0;
+ 	padding: 20px 0 0;
 	}
 	#profiletop .span-10 h2{
 		font-size: 35px;
@@ -156,18 +182,18 @@ margin: 0;
 			background: red;
 			}
 	#profiletop .span-10 p{
-		margin: 0 0 0px;
+		margin: 0 0 10px;
 		}
-	
-#proflemiddle {	
+
+#proflemiddle {
 	background: #0099CC;
 	padding: 15px;
 	border-top: 1px solid #68CBDA;
 	border-bottom: 1px solid #68CBDA;
-	}	
+	}
 	#inputdone{
 		background:  url(/images/inputbg.png) repeat-x top;
- 
+
 		border: 1px solid #11669E;
 		box-shadow:0px 1px 0px #26AEF1;
 		-moz-box-shadow:0px 1px 0px #26AEF1;
@@ -194,16 +220,16 @@ margin: 0;
     width: 30px;
     color: #ccc;
     margin: 0;
-			
+
 			}
-		#inputdone #post_submit{	
+		#inputdone #post_submit{
 			float: right;
  			margin: 10px 10px 10px 0;
- 			
+
 			}
 
 
-#proflebottom{	
+#proflebottom{
 	border-top: 1px solid #114B7D;
 	 }
 	#proflebottom .stat{
@@ -233,7 +259,7 @@ overflow: hidden;
 		color: #eee;
 		text-decoration: none;
 		font-size: 11px;
-		text-transform: uppercase; 
+		text-transform: uppercase;
 		border-right:1px solid #073D62;
  		text-align: center;
 		}
@@ -241,8 +267,8 @@ overflow: hidden;
 		padding: 5px 15px;
 		color: #eee;
 		font-size: 11px;
-		
- 
+
+
 		}
 				#proflebottom .stat ul li a:hover,
 				#proflebottom .stat ul li.current a{
@@ -256,7 +282,7 @@ overflow: hidden;
 		margin: 0;
 		padding: 0;}
 		.taskdone ul li{
-			
+
  			}
 			.taskdone ul.daily li p{
 			font-family: 'Oswald', arial, serif;
@@ -276,7 +302,7 @@ overflow: hidden;
 		-moz-border-radius: 8px;
 		-webkit-border-radius: 8px;
 
- 
+
  }
 				.taskdone ul.taskly li{
  					background: transparent;
@@ -287,10 +313,29 @@ overflow: hidden;
  					border-bottom:1px solid #eee;
  					border-top:0px;
 					}
-					.taskdone ul.taskly li span a{
+					.taskdone ul.taskly li span  {
 						display: block;
-						color: #ccc;
+						color: #666;
 						font-size: 11px;
+						float: right;
 						}
 					.taskdone ul.taskly li:hover{
 					background: #eee;}
+					
+					
+input.highfive{
+	background:url(/images/hand.png) no-repeat center yellow;
+	height: 20px;
+	width: 20px;
+	border:0;
+	display: block;
+	text-indent: -9999px;
+	cursor: pointer;
+	padding: 3px;
+	margin: 0 0 0 10px;
+			border-radius: 8px;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+
+	
+}					

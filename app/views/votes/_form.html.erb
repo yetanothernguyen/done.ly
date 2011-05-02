@@ -2,7 +2,7 @@
 <%= form_for(@vote || Vote.new) do |f| %>
 		<%= f.text_field :user_id, :value => current_user.id, :class => 'hide' %>
 		<%= f.text_field :post_id, :value => post.id, :class => 'hide' %>
-		
-		<%= f.submit "High Five!", :class => '' %>
+
+		<%= f.submit "High Five!", :class => "fright highfive" %>
 	</div>
 <% end %>

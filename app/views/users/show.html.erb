@@ -5,7 +5,7 @@
 
 <div id="userprofile">
 	<div id="profiletop">
-		<div class="span-5-2 fleft">
+		<div class="span-5 fleft">
 		<% if @user == current_user %>
 			<%= link_to image_tag(avatar_url(@user)), "http://gravatar.com/emails", :title => "Change", :target => "_blank" %>
 		<% else %>
@@ -47,14 +47,15 @@
 								<li>
 									<%= current_user && current_user.id == @user.id ? "I" : @user.name %>
 									<%= post.content %>
-									
-									
-									<span><%= "#{post.votes.count} High Fives!" %></span>
+
+
 									<% if current_user && current_user != @user && post.votes.by_user(current_user).empty? %>
 									<span>
 										<%= render :partial => "votes/form", :locals => {:post => post} %>
 									</span>
 									<% end %>
+																		<span><%= "#{post.votes.count} High Fives!" %></span>
+
 								</li>
 							<% end %>
 						</ul>
