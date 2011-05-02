@@ -1,9 +1,18 @@
 DoneLy::Application.routes.draw do
 
+  # get "posts/index"
+  # get "posts/show"
+  # get "posts/new"
+  # get "posts/create"
+  # get "posts/update"
+  # get "posts/delete"
+
   devise_for :users, :controllers => { :registrations => "users/registrations" }
 
   resources :teams
   resources :users, :only => :show
+
+  resources :posts
 
   root :to => "teams#show"
   

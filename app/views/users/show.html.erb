@@ -37,4 +37,13 @@
 
 	</div>
 
-</div>
+</div><h1><%= @user.name %></h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+<ul>
+<% for post in @posts do %>
+	<li><p>post.content</p></li>
+<% end%>
+</ul>
+<%= render "posts/form" %>
+
