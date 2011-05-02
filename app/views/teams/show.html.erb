@@ -8,7 +8,7 @@
 <h3>Team members:</h3>
 <ul>
 <% @users.each do |user| %>
-	<li><%= user.name %></li>
+	<li><%= image_tag avatar_url(user, 40) %> <%= user.name %></li>
 <% end %>
 </ul>
 
