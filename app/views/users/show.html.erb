@@ -40,7 +40,8 @@
 			<ul class="daily">
 				<% for day in @posts_by_days do %>
 					<li>
-						<p><%= day[0] %></p>
+						<% days_ago = Time.now.to_date - day[0]%>
+						<p><%= days_ago == 0 ? "Today" : "#{days_ago} #{pluralize(2, 'day')} ago" %></p>
 						<ul class="taskly">
 							<% for post in day[1] do %>
 								<li>
