@@ -31,7 +31,7 @@
  				<li class="current"><a href="#">Daily</a></li>
  				<li><a href="#">Weekly</a></li>
  				<li><a href="#">Monthly</a></li>
- 				<li class="fright">2</li>
+ 				<li class="fright"><%= @user.posts.count %></li>
 			 </ul>
  		</div>
 
@@ -48,7 +48,7 @@
 									
 									
 									<span><%= "#{post.votes.count} High Fives!" %></span>
-									<% if current_user && post.votes.by_user(current_user).empty? %>
+									<% if current_user && current_user != @user && post.votes.by_user(current_user).empty? %>
 									<span>
 										<%= render :partial => "votes/form", :locals => {:post => post} %>
 									</span>
