@@ -6,6 +6,10 @@
 		<div class="span-10 fleft">
 			<h2><%= @user.name %> <span>Status</span></h2>
 			<p><%= @user.email %></p>
+			<% team = Team.first %>
+			<% if team %>
+				<p><%= link_to team.name, team_path(team) %></p>
+			<% end %>
 		</div>
 	</div>
 

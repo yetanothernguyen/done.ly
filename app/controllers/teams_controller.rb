@@ -13,7 +13,8 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.xml
   def show
-    @team = Team.find(params[:id])    
+    @team = Team.find(params[:id])
+    @activities = Post.order("created_at DESC")
 
     respond_to do |format|
       format.html # show.html.erb

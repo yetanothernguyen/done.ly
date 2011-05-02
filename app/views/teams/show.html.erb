@@ -5,6 +5,8 @@
 	<p><%= @team.description %></p>
 </div>
 
-
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<ul>
+<% @activities.each do |activity| %>
+	<li><%= activity.user.name %> done <%= activity.content %></li>
+<% end %>
+</ul>
