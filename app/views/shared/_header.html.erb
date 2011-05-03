@@ -6,6 +6,7 @@
 <ul id="topnav">
 	<% if user_signed_in? %>
 		<li><%= link_to 'Your Profile', user_path(current_user) %></li>
+		<li><%= link_to 'Your Team', team_path(current_user.team) %></li>
 		<li><%= link_to 'Settings', edit_user_registration_path %></li>
 		<li><%= link_to 'Logout', destroy_user_session_path %></li>
 	<% else %>

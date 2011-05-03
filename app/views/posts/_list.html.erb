@@ -13,8 +13,9 @@
 						<% author = post.user %>
 						<li>
 							<%#= current_user && current_user.id == author.id ? "You" : author.name %>
-							<%= author.name %>
-							<%= post.content %>
+							<%= link_to image_tag(avatar_url(author, 20)), user_path(author), :class => "avatar" %>
+							<%= link_to author.name, user_path(author) %>
+							<%= post.content[0, 1].downcase + post.content[1..-1] %>
 
 
 							<% if current_user && current_user != author && post.votes.by_user(current_user).empty? %>
@@ -23,7 +24,7 @@
 							</span>
 
 							<% end %>
-									<span><%= "#{post.votes.count} High Fives!" %></span>
+									<span><span class="highfives" id="highfive-<%= post.id %>"><%= post.votes.count %></span> High Fives</span>
 
 						</li>
 					<% end %>

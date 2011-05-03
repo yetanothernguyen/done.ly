@@ -1,4 +1,4 @@
-<div id="voteform">
+<div class="voteform">
 <%= form_for(@vote || Vote.new) do |f| %>
 		<%= f.text_field :user_id, :value => current_user.id, :class => 'hide' %>
 		<%= f.text_field :post_id, :value => post.id, :class => 'hide' %>
