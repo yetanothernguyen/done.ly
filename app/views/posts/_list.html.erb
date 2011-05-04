@@ -15,7 +15,7 @@
 							<%#= current_user && current_user.id == author.id ? "You" : author.name %>
 							<%= link_to image_tag(avatar_url(author, 20)), user_path(author), :class => "avatar" %>
 							<%= link_to author.name, user_path(author) %>
-							<%= post.content[0, 1].downcase + post.content[1..-1] %>
+							<%= post.content[0, 1].downcase + post.content[1..-1] unless post.content.empty? %>
 
 
 							<% if current_user && current_user != author && post.votes.by_user(current_user).empty? %>
