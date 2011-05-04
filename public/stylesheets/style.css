@@ -341,12 +341,33 @@ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 border-bottom: 1px solid #eee;
 border-top: 0px;
 }
-.taskdone ul.taskly li span {
+.taskdone ul.taskly li div.hf-box {
 display: block;
 color: #666;
 font-size: 11px;
 float: right;
 }
+
+.taskdone ul.taskly li ul.highfivers {
+	width: 100px;
+	border: 0px dashed red;
+	padding: 2px;
+	overflow:hidden;
+	display:none;
+	position: absolute;
+	background-color: #AFAFAF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+}
+.taskdone ul.taskly li ul.highfivers li {
+	color: #666;
+	font-size: 11px;	
+	padding: 2px;
+	padding-left: 4px;
+}
+
 .taskdone ul.taskly li:hover {
 background: #eee;
 }

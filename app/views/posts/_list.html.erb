@@ -24,8 +24,18 @@
 							</span>
 
 							<% end %>
-									<span><span class="highfives" id="highfive-<%= post.id %>"><%= post.votes.count %></span> High Fives</span>
+							<div class="hf-box">
+								<div class="highfives">
+									<span id="highfive-<%= post.id %>"><%= post.votes.count %></span> High Fives
+								</div>
 
+								<ul class="highfivers">
+									<% for vote in post.votes do %>
+										<li> <%= vote.user.name %> </li>
+									<% end %>
+								</ul>
+							</div>
+							
 						</li>
 					<% end %>
 				</ul>
