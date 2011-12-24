@@ -2,7 +2,10 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.xml
   def index
-    @teams = current_user.created_teams
+    @teams = current_user.teams if current_user
+    invite_tokens = Utils.get_invite_tokens(cookies)
+    invite_tokens.delete_if { |token| @teams.index { |team| team.invite_token == token } != nil }
+    @pending_teams = Team.find_all_by_invite_token(invite_tokens)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -15,7 +18,7 @@ class TeamsController < ApplicationController
   def show
     @team = Team.find(params[:id])
     @posts_by_days = Post.by_date.group_by(&:date) # refactor to support multiple teams
-    @users = User.all
+    @members = @team.members
 
     respond_to do |format|
       format.html # show.html.erb
@@ -82,5 +85,15 @@ class TeamsController < ApplicationController
       format.html { redirect_to(teams_url) }
       format.xml  { head :ok }
     end
+  end
+
+  def join
+    @team = Team.find(params[:id])
+    current_user.teams << @team
+    current_user.save
+
+    Utils.remove_invite_token(@team.invite_token, cookies)
+
+    redirect_to teams_path
   end
 end

@@ -5,7 +5,7 @@
 <h1 id="brand"><a href="/">DONELY</a></h1>
 <ul id="topnav">
 	<% if user_signed_in? %>
-		<li><%= link_to 'Your Profile', user_path(current_user) %></li>
+		<li><%= link_to 'Your Donely', user_path(current_user) %></li>
     <li><%= link_to 'Create team', new_team_path %></li>
     <li><%= link_to 'Your teams', teams_path %></li>
 		<li><%= link_to 'Settings', edit_user_registration_path %></li>

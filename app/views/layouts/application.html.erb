@@ -15,16 +15,11 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<p class="notice hide"><%= notice %></p>
-<p class="alert hide"><%= alert %></p>
-<%= render 'shared/header' %>
-
-
-<div id="maincontainer">
-
-<%= yield %>
-</div>
-
-
+  <p class="notice hide"><%= notice %></p>
+  <p class="alert hide"><%= alert %></p>
+  <%= render 'shared/header' %>
+  <div id="maincontainer">
+  <%= yield %>
+  </div>
 </body>
 </html>

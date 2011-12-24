@@ -11,7 +11,11 @@ DoneLy::Application.routes.draw do
 
   devise_for :users #, :controllers => { :registrations => "users/registrations" }
 
-  resources :teams
+  resources :teams do
+    member do
+      post :join
+    end
+  end
   resources :users, :only => :show
   resources :posts
   resources :votes

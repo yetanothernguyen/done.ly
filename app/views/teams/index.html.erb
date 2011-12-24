@@ -8,5 +8,7 @@
   <% end %>
 </ul>
 
-<br />
+  <% @pending_teams && @pending_teams.each do |team| %>
+    You're invited to join <%= team.name %>. <%= button_to "Accept", join_team_path(team), :class => "leo-btn" %>
+  <% end %>
 </div>

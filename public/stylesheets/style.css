@@ -76,7 +76,7 @@ overflow: hidden;
 padding: 15px 0 10px;
 }
 h1#brand a {
-color: grey;
+color: #333;
 float: left;
 font-family: 'Patua One',arial,serif;
 font-size: 23px;
@@ -98,7 +98,7 @@ float: left;
 ul#topnav li a {
 display: block;
 padding: 10px 0 10px 20px;
-color: #ccc;
+color: #333;
 }
 /* HOME PAGE */
 #homepage {
@@ -107,7 +107,7 @@ color: #ccc;
 font-family: 'Neuton',Arial,serif;
 font-size: 40px;
 line-height: 50px;
-background: url("/images/bubbl.png") no-repeat scroll 550px 80px #FFFF66 ;
+background: url("/images/fist.png") no-repeat scroll 520px 30px #FFFF66 ;
 padding: 20px 30px 30px;
 border-top: 1px solid #FFF8A7;
 border-left: 1px solid #FFF8A7;
@@ -125,14 +125,15 @@ background: #eee;
 padding: 25px 0;
 }
 #homepage .bigpad .span-11 {
-font-size: 14px;
+font-size: 16px;
+color: #333;
 }
 #homepage .bigpad .span-11 h2 {
 font-size: 16px;
 font-weight: bold;
 }
 #homepage .bigpad .span-11 ul {
-margin: 0 0 40px 0;
+margin: 0 0 25px 0;
 padding: 0;
 }
 #homepage .bigpad .span-11 ul li {
@@ -179,11 +180,11 @@ border-radius: 7px;
 overflow: hidden;
 border-bottom: 1px solid #006699;
 }
-#profiletop .span-5 {
+#profiletop .span-3 {
 }
-#profiletop .span-5 img {
-width: 150px;
-height: 150px;
+#profiletop .span-3 img {
+width: 75px;
+height: 75px;
 padding: 5px;
 margin: 15px ;
 background: #fff;
@@ -227,7 +228,7 @@ float: left;
 height: 20px;
 margin-top: 14px;
 margin-left: 20px;
-color: #ccc;
+color: #333;
 width: 24px;
 }
 #inputdone {
