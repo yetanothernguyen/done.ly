@@ -14,8 +14,9 @@ DoneLy::Application.routes.draw do
   resources :teams
   resources :users, :only => :show
   resources :posts
-
-  resources :votes 
+  resources :votes
+  resources :invites, :only => :show    
+ 
 
   root :to => "home#index"
 end

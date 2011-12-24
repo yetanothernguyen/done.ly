@@ -2,7 +2,7 @@ class TeamsController < ApplicationController
   # GET /teams
   # GET /teams.xml
   def index
-    @teams = Team.all
+    @teams = current_user.created_teams
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,7 +43,7 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.xml
   def create
-    @team = Team.new(params[:team])
+    @team = current_user.created_teams.new(params[:team])
 
     respond_to do |format|
       if @team.save

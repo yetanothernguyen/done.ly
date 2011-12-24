@@ -3,8 +3,8 @@ margin: 0;
 padding: 0;
 }
 body {
-background: #333 url(/images/hugebg.gif) repeat top center;
-font-family: "Helvetica Neue",Helvetica,"Lucida Grande",Arial,sans-serif;
+background: #333 url(/images/xnngfxa.png) repeat;
+font-family: "Crete Round",Helvetica,"Lucida Grande",Arial,sans-serif;
 font-size: 12px;
 }
 a {
@@ -39,7 +39,8 @@ overflow: hidden;
 #user_password_confirmation,
 #user_name,
 #user_email,
-#user_current_password {
+#user_current_password,
+.form_field {
 padding: 7px;
 font-size: 13px;
 color: #555;
@@ -75,12 +76,13 @@ overflow: hidden;
 padding: 15px 0 10px;
 }
 h1#brand a {
-color: yellow;
+color: grey;
 float: left;
-font-family: 'Kreon',arial,serif;
+font-family: 'Patua One',arial,serif;
 font-size: 23px;
 padding: 14px 0 0;
 width: 100px;
+letter-spacing: 1px;
 text-decoration: none;
 }
 /* TOP NAV */

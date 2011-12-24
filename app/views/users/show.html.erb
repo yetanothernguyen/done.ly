@@ -14,10 +14,7 @@
 		<div class="span-10 fleft">
 			<h2><%= @user.name %> <span>Status</span></h2>
 			
-			<% team = Team.first %>
-			<% if team %>
-				<p><%= link_to team.name, team_path(team) %></p>
-			<% end %>
+			<p><%= link_to @user.team.name, team_path(@user.team) %></p>
 		</div>
 	</div>
 

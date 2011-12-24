@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110502080639) do
+ActiveRecord::Schema.define(:version => 20111224090019) do
 
   create_table "posts", :force => true do |t|
     t.string   "content"
@@ -18,19 +18,6 @@ ActiveRecord::Schema.define(:version => 20110502080639) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "rails_admin_histories", :force => true do |t|
-    t.string   "message"
-    t.string   "username"
-    t.integer  "item"
-    t.string   "table"
-    t.integer  "month",      :limit => 2
-    t.integer  "year",       :limit => 8
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_histories_on_item_and_table_and_month_and_year"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"
@@ -50,6 +37,8 @@ ActiveRecord::Schema.define(:version => 20110502080639) do
     t.string   "name"
     t.text     "description"
     t.string   "cached_slug"
+    t.integer  "user_id"
+    t.string   "invite_token"
   end
 
   create_table "users", :force => true do |t|
@@ -66,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110502080639) do
     t.string   "name"
     t.boolean  "admin"
     t.string   "username"
+    t.integer  "team_id"
   end
 
   add_index "users", ["confirmation_token"], :name => "index_users_on_confirmation_token", :unique => true

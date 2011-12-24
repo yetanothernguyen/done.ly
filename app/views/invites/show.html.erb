@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="tophead">
+  <h1><%= @team.name %></h1>
+  <p><%= @team.description %></p>
+</div>
+<div id="teampage" class="bigpad">
+<div class="span-4 fright">
+<h3>Members </h3>
+<ul class="team-members">
+<% @members.each do |member| %>
+  <li><%= link_to image_tag(avatar_url(member, 50)), user_path(member) %></li>
+<% end %>
+</ul>
+</div>
+<div class="span-11 fleft">
+<p>
+  You're invited to join this team. <%= link_to "Join now", new_user_registration_path %>.
+</p>
+</div>

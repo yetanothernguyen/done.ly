@@ -2,23 +2,11 @@
   <h2>Teams</h2>
 </div>
 <div class="bigpad">
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @teams.each do |team| %>
-  <tr>
-    <td><%= team.name %> </td>
-    <td><%= team.description %> </td>
-    <td><%= link_to 'Show', team %></td>
-  </tr>
-<% end %>
-</table>
+<ul>
+  <% @teams.each do |team| %>
+  <li><%= link_to team.name, team_path(team) %></li>
+  <% end %>
+</ul>
 
 <br />
 </div>
