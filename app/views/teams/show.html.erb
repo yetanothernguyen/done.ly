@@ -5,7 +5,7 @@
 	<h1><%= @team.name %></h1>
 	<p><%= @team.description %></p>
   <% if @team.is_creator?(current_user) %>
-    <p>Invitation link: <%= link_to invite_url(:id => @team.invite_token), invite_url(:id => @team.invite_token) %></p>
+    <p>Give this secret link to people you want to invite to <%= @team.name %>.<br /><%= link_to invite_url(:id => @team.invite_token), invite_url(:id => @team.invite_token) %></p>
   <% end %>
 </div>
 <div id="teampage" class="bigpad">
