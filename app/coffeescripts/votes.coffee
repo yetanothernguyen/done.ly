@@ -2,6 +2,7 @@ $(document).ready ->
 	$form = $(".voteform form")
 	$form.submit ->
 		$item = $(this)
+		$item.hide()
 		url = this.action
 		data = $(this).serialize()
 		$.post(url, data, success = (x) -> 

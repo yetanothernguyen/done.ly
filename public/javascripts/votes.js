@@ -1,4 +1,4 @@
-/* DO NOT MODIFY. This file was compiled Tue, 27 Dec 2011 14:56:09 GMT from
+/* DO NOT MODIFY. This file was compiled Tue, 27 Dec 2011 15:06:47 GMT from
  * /Users/nvunguyen/Projects/done.ly/app/coffeescripts/votes.coffee
  */
 
@@ -9,16 +9,15 @@
     $form.submit(function() {
       var $item, data, success, url;
       $item = $(this);
+      $item.hide();
       url = this.action;
       data = $(this).serialize();
       $.post(url, data, success = function(x) {
         var $hf, count;
         console.debug($item);
         $hf = $(".highfives span", $item.closest("li"));
-        console.debug($hf);
         count = parseInt($hf.html());
         $hf.html(count + 1);
-        $(".voteform form", $hf).hide();
         return $item.parent().parent().remove();
       });
       return false;
