@@ -5,10 +5,11 @@ $(document).ready ->
 		url = this.action
 		data = $(this).serialize()
 		$.post(url, data, success = (x) -> 
+			console.debug($item)
 			$hf = $(".highfives span", $item.closest("li"))
 			count = parseInt($hf.html())
 			$hf.html(count + 1)
-			$(".voteform form", $hf).hide()
+			$item.parent().parent().remove()
 		)
 		return false
 	
