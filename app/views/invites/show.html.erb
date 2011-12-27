@@ -1,21 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div id="homepage">
 
-
-<div class="tophead">
-  <h1>You've been invited to join <%= @team.name %> in using Donely.</h1>
-  <p><%= @team.description %></p>
-</div>
-<div id="teampage" class="bigpad">
-<div class="span-4 fright">
-<%= link_to "Join now", new_user_registration_path, :class=>"leo-btn orange" %>
-<h3>Members </h3>
-<ul class="team-members">
+<h1 class="tagline">You've been invited to join <br />
+<%= @team.name %> in using Donely.</h1>
+<div class="bigpad">
+<div class="span-11">
+<p>Your friends at <%= @team.name %> are waiting for you</p>
 <% @members.each do |member| %>
-  <li><%= link_to image_tag(avatar_url(member, 50)), user_path(member) %></li>
+<%= link_to image_tag(avatar_url(member, 50)), user_path(member) %>
 <% end %>
-</ul>
-</div>
-<div class="span-11 fleft">
 <ul>
 	<li>Keep a record of what you have done.</li>
 	<li>See yesterday's accomplishments to motivate you today.</li>
@@ -23,3 +15,7 @@
 </ul>
 <p>Wanna join <%= @team.name %> in getting a daily rush of getting things done?</p>
 </div>
+<div class="span-5 fright">
+  <%= link_to "Join Now", new_user_registration_path, :class=>"leo-btn orange" %>
+</div>
+</div></div>
